@@ -1,0 +1,8 @@
+node_modules/
+exampleC/*.wasm
+exampleC/*.js
+exampleCSimplePrint/*.wasm
+exampleCSimplePrint/*.js
+*.o
+
+.directory

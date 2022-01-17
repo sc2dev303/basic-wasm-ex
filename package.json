@@ -1,0 +1,12 @@
+{
+  "name": "fact-wasm-ex",
+  "scripts": {
+    "build:dockerimage": "docker image inspect -f '.' factwasmex || docker build -t factwasmex .",
+    "build:emscripten": "docker run --rm -v $(pwd):/src mydockerimage make all",
+    "build": "npm run build:dockerimage && npm run build:emscripten",
+    "serve": "http-server -c0"
+  }, 
+  "devDependencies": {
+    "http-server": "*"
+  }
+}
